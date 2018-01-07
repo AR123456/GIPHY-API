@@ -1,5 +1,5 @@
 // make an array of giphs 
-var topic = ["shocked dog", "chihuahua","baby", "puppy", "Ryan Gosling ","Saint Bernard", "Love gnome", "waving", "Llama"," Reaction", "Good Morning ","Happy Dance", "Nope", "Chris Hemsworth","narwhal","Robert Redford" ];
+var topic = ["shocked dog", "chihuahua","baby", "puppy", "Ryan Gosling ","Saint Bernard", "Love gnome", "waving", "Llama"," Reaction", "Good Morning ","Happy Dance", "Nope", "narwhal","Robert Redford" ];
 // console.log("this is giphys:  "+ topic);
 //function to display giphy buttons 
 function renderButtons(){
