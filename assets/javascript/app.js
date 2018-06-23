@@ -1,5 +1,4 @@
-// make an array of giphs
-var topic = [
+const topic = [
   "shocked dog",
   "chihuahua",
   "baby",
@@ -20,8 +19,8 @@ var topic = [
 function renderButtons() {
   $("#giphy-view").empty();
 
-  for (var i = 0; i < topic.length; i++) {
-    var gifButton =
+  for (let i = 0; i < topic.length; i++) {
+    let gifButton =
       '<button class="gif" data-name="' +
       topic[i] +
       '">' +
@@ -37,7 +36,7 @@ renderButtons();
 $("#add-giphy").on("click", function(event) {
   event.preventDefault();
 
-  var giphy = $("#giphy-input")
+  let giphy = $("#giphy-input")
     .val()
     .trim();
 
@@ -50,9 +49,9 @@ $("#add-giphy").on("click", function(event) {
 $("#giphy-view").on("click", ".gif", function() {
   $("#giphy-div").empty();
 
-  var searchTerm = $(this).attr("data-name");
+  let searchTerm = $(this).attr("data-name");
 
-  var queryURL =
+  const queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
     searchTerm +
     "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -61,12 +60,12 @@ $("#giphy-view").on("click", ".gif", function() {
     url: queryURL,
     method: "GET"
   }).done(function(response) {
-    for (var i = 0; i < response.data.length; i++) {
-      var gifDiv = $("<div>");
+    for (let i = 0; i < response.data.length; i++) {
+      let gifDiv = $("<div>");
 
-      var p = $("<p>").text("Rating: " + response.data[i].rating);
+      let p = $("<p>").text("Rating: " + response.data[i].rating);
 
-      var gifImage = $("<img class ='gif'>");
+      let gifImage = $("<img class ='gif'>");
 
       gifImage.attr("src", response.data[i].images.fixed_height_still.url);
       gifImage.attr({
@@ -82,7 +81,7 @@ $("#giphy-view").on("click", ".gif", function() {
     }
 
     $(".gif").on("click", function() {
-      var state = $(this).attr("data-state");
+      let state = $(this).attr("data-state");
 
       if (state === "still") {
         $(this).attr("data-state", "animate");
