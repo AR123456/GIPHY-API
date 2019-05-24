@@ -54,7 +54,8 @@ $("#giphy-view").on("click", ".gif", function() {
   const queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
     searchTerm +
-    "&api_key=dc6zaTOxFJmzC&limit=10";
+    // "&api_key=dc6zaTOxFJmzC&limit=10";
+    "&api_key=dwjvshF3IN3EJz7nNgFu7c9FeTZggQL7&limit=10";
 
   $.ajax({
     url: queryURL,
